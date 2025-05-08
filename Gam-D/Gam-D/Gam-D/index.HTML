@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Tiro Simples</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "game": "./game.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="startScreen">
+        <h1>Jogo de Tiro Simples</h1>
+        <label for="playerName">Digite Seu Nome:</label>
+        <input type="text" id="playerName" value="Jogador" placeholder="Seu Nome">
+        <button id="startButton">Começar Jogo</button>
+    </div>
+
+    <div id="weaponSelectionScreen" class="hidden">
+        <h1>Selecione sua Arma</h1>
+        <div class="weapon-options">
+            <button data-weapon="0">
+                <img src="gun.png" alt="Rifle Simples"><br>
+                <img src="../assets/imagens/"
+                Rifle <br>(Balanceado)
+            </button>
+            <button data-weapon="1">
+                 <img src="gun2.png" alt="Rifle de Assalto"><br>
+                Rifle de Assalto <br>(Rápido)
+            </button>
+            <button data-weapon="2">
+                <img src="gun3.png" alt="Metralhadora Pesada"><br>
+                Metralhadora Pesada <br>(Poderoso)
+            </button>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+    <script type="module" src="game.js"></script>
+</body>
+</html>
